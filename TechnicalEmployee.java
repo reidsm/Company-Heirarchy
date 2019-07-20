@@ -1,9 +1,13 @@
 public class TechnicalEmployee extends Employee{
 
-    private double baseSalary = 75000;
+    public static int baseSalary = 75000;
 
     public TechnicalEmployee(String name){
-        super(name);
-        this.baseSalary = 75000;
+        super(name, baseSalary);
     }
+
+    public TechnicalEmployee(String name, double salaryMultiplier){
+        super(name, baseSalary * salaryMultiplier);
+    }
+
 }

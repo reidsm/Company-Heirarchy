@@ -21,7 +21,7 @@ public abstract class Employee {
 
     public Employee(){
         this.name = "";
-        this.baseSalary = 0;
+        //this.baseSalary = 0;
         this.employeeID = nextID++;
         this.manager = null;
     }

@@ -1,3 +1,4 @@
+
 public abstract class Employee {
 
     private String name;
@@ -35,6 +36,7 @@ public abstract class Employee {
     }
 
     public void setManager(Employee manager){
+
         this.manager = manager;
     }
 
@@ -44,6 +46,18 @@ public abstract class Employee {
 
     public double getBaseSalary(){
         return this.baseSalary;
+    }
+
+    public int getEmployeeID(){
+        return this.employeeID;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String employeeStatus(){
+        return this.getEmployeeID() + " " + this.getName();
     }
 
 }

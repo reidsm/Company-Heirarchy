@@ -1,27 +1,31 @@
 
 public class CompanyStructureMain {
     public static void main(String args[]){
-        TechnicalLead CTO = new TechnicalLead("Satya Nadella");
-        SoftwareEngineer seA = new SoftwareEngineer("Kasey");
-        SoftwareEngineer seB = new SoftwareEngineer("Balleus");
-        SoftwareEngineer seC = new SoftwareEngineer("Testiclees");
-        SoftwareEngineer seD = new SoftwareEngineer("Monica");
-        CTO.addReport(seA);
-        CTO.addReport(seB);
-        CTO.addReport(seC);
-        CTO.addReport(seD);
-        System.out.println(CTO);
-        System.out.println(seA);
-        System.out.println(CTO.getReports());
-        System.out.println(seA.getManager());
-        System.out.println(CTO.hasHeadCount());
-        System.out.println(seC.getManager());
-        seA.setCodeAccess(true);
-        System.out.println(seA.getCodeAccess());
-        seA.checkinCode();
-        seA.checkinCode();
-        System.out.println(seA.getSuccessfulCheckins());
-        System.out.println(seA.employeeStatus());
-        CTO.getTeamStatus();
+            TechnicalLead CTO = new TechnicalLead("Satya Nadella");
+            SoftwareEngineer seA = new SoftwareEngineer("Kasey");
+            SoftwareEngineer seB = new SoftwareEngineer("Breana");
+            SoftwareEngineer seC = new SoftwareEngineer("Eric");
+            CTO.addReport(seA);
+            CTO.addReport(seB);
+            CTO.addReport(seC);
+            System.out.println(CTO.getTeamStatus());
+
+            TechnicalLead VPofENG = new TechnicalLead("Bill Gates");
+            SoftwareEngineer seD = new SoftwareEngineer("Winter");
+            SoftwareEngineer seE = new SoftwareEngineer("Libby");
+            SoftwareEngineer seF = new SoftwareEngineer("Gizan");
+            SoftwareEngineer seG = new SoftwareEngineer("Zaynah");
+            VPofENG.addReport(seD);
+            VPofENG.addReport(seE);
+            VPofENG.addReport(seF);
+            VPofENG.addReport(seG);
+            System.out.println(VPofENG.getTeamStatus());
+
+            BusinessLead CFO = new BusinessLead("Amy Hood");
+            Accountant actA = new Accountant("Niky");
+            Accountant actB = new Accountant("Andrew");
+            CFO.addReport(actA, CTO);
+            CFO.addReport(actB, VPofENG);
+            System.out.println(CFO.getTeamStatus());
     }
 }

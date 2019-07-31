@@ -3,8 +3,8 @@ import java.util.*;
 public class TechnicalLead extends TechnicalEmployee{
 
     private List<Employee> reports = new ArrayList<Employee>();
+    private static double salaryMultiplier = 1.3;
 
-    public static double salaryMultiplier = 1.3;
 
     public TechnicalLead(String name){
         super(name, salaryMultiplier);

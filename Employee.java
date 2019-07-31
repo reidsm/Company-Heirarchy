@@ -5,6 +5,7 @@ public abstract class Employee {
     private double baseSalary;
     private int employeeID;
     private Employee manager;
+    private double bonus;
 
     private static int nextID=1;
 
@@ -58,6 +59,14 @@ public abstract class Employee {
 
     public String employeeStatus(){
         return this.getEmployeeID() + " " + this.getName();
+    }
+
+    public void setBonus(double bonus){
+        this.bonus = bonus;
+    }
+
+    public double getBonus(){
+        return this.bonus;
     }
 
 }

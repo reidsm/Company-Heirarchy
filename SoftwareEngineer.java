@@ -22,9 +22,9 @@ public class SoftwareEngineer extends TechnicalEmployee{
     }
 
     public boolean checkinCode(){
-        TechnicalLead thisManager = ((TechnicalLead) this.getManager());
+        TechnicalLead thisManager = ((TechnicalLead) this.getManager()); //had to cast the employee to a TechnicalLead so I could access the approveCheckin method
         if(thisManager.approveCheckIn(this)){
-            checkinCount = checkinCount + 1;
+            checkinCount = checkinCount + 1; //increments the checkin count
             return true;
         }else{
             return false;

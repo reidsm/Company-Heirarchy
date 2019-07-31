@@ -1,5 +1,5 @@
 public class BusinessEmployee extends Employee {
-
+//very similar to TechnicalEmployee
     private static int baseSalary = 50000;
 
     public BusinessEmployee(String name){

@@ -2,30 +2,17 @@
 public abstract class Employee {
 
     private String name;
-    private double baseSalary;
+    private double baseSalary; //all employees have a base salary even though they are all differet, it was rticky to figure out how to get it working at this level
     private int employeeID;
     private Employee manager;
     private double bonus;
 
     private static int nextID=1;
 
-    public Employee(String name, double baseSalary){
+    public Employee(String name, double baseSalary){ //turns out I had to create a constructor that would accept a salary parameter to declare the salary variable here - the subclass constructors call this superclass constructor
         this.name = name;
         this.baseSalary = baseSalary;
-        employeeID=nextID++;
-    }
-
-    public Employee(String name){
-        this.name = name;
-        //this.baseSalary = 0;
-        employeeID=nextID++;
-    }
-
-    public Employee(){
-        this.name = "";
-        //this.baseSalary = 0;
-        this.employeeID = nextID++;
-        this.manager = null;
+        employeeID=nextID++; //was tricky to figure out how to get the employee IDs to count up, I had to use 2 variables
     }
 
     public String toString(){
@@ -58,7 +45,7 @@ public abstract class Employee {
     }
 
     public String employeeStatus(){
-        return this.getEmployeeID() + " " + this.getName();
+        return this.getEmployeeID() + " " + this.getName(); //wanted to write this up here since it uses the abstract employee fields
     }
 
     public void setBonus(double bonus){

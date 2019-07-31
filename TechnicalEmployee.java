@@ -4,7 +4,7 @@ public class TechnicalEmployee extends Employee{
 
 
     public TechnicalEmployee(String name){
-        super(name, baseSalary);
+        super(name, baseSalary); //passing back this salary as a parameter, now we can just change the base salary in one place :D
     }
 
     public TechnicalEmployee(String name, double salaryMultiplier){
@@ -13,7 +13,7 @@ public class TechnicalEmployee extends Employee{
     }
 
     public String employeeStatus(){
-        return super.employeeStatus();
+        return super.employeeStatus(); //basically just a placeholder, calls the superclass, the oens down the line are more interesting
     }
 
 }

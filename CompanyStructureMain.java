@@ -1,4 +1,4 @@
-
+//this just has the code from the assignment in it, which doesn't test everything, but I think every function they asked me to write actually works!
 public class CompanyStructureMain {
     public static void main(String args[]){
             TechnicalLead CTO = new TechnicalLead("Satya Nadella");
